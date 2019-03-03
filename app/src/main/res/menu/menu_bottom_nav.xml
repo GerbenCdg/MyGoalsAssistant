@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_nav_goals_list"
+          android:title="@string/my_goals"
+          android:icon="@drawable/baseline_star_black_24"
+          app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/menu_nav_timeline"
+          android:title="@string/timeline"
+            android:icon="@drawable/baseline_timeline_black_24"
+            app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/menu_nav_statistics"
+          android:title="@string/statistics"
+          android:icon="@drawable/baseline_bar_chart_black_24"
+          app:showAsAction="ifRoom"/>
+
+</menu>

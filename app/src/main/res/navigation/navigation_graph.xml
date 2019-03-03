@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation_graph"
+            app:startDestination="@id/goalListFragment">
+
+    <fragment
+            android:id="@+id/goalListFragment"
+            android:name="com.gmail.gerbencdg.mygoalsassistant.view.fragment.GoalListFragment"
+            android:label="@string/my_goals">
+
+        <action
+                android:id="@+id/action_goalListFragment_to_goalDetailFragment"
+                app:destination="@id/goalDetailFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:popEnterAnim="@anim/nav_default_enter_anim"
+                app:popUpTo="@+id/goalListFragment"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/goalDetailFragment"
+            android:name="com.gmail.gerbencdg.mygoalsassistant.view.fragment.GoalDetailFragment"
+            android:label="@string/goal_details">
+
+            <argument android:name="goalId" app:argType="integer"/>
+
+    </fragment>
+
+
+
+</navigation>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="GoalListVM" type="com.gmail.gerbencdg.mygoalsassistant.viewmodel.GoalListVM"/>
+
+        <import type="com.gmail.gerbencdg.mygoalsassistant.utils.BindingConverters"/>
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <include layout="@layout/item_quote"/>
+
+                <LinearLayout
+                        android:id="@+id/emptyView"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_normal"
+                        android:visibility="@{BindingConverters.listEmptyToVisibility(GoalListVM.getGoals().empty)}">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no_goals_yet"
+                            android:textAppearance="?attr/textAppearanceHeadline5"/>
+
+                    <Button
+                            android:layout_marginTop="@dimen/margin_normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/createFirstGoalButton"
+                            android:text="@string/create_first_goal"/>
+                </LinearLayout>
+
+
+                <TextView
+                        android:id="@+id/todayGoalsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceSubtitle1"
+                        android:text="@string/goals_for_today"
+                        android:padding="@dimen/margin_normal"
+                        android:visibility="@{BindingConverters.filteredListNotEmptyToVisibility(GoalListVM.getGoals(), GoalListVM.todayGoalsPredicate)}"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/todayGoalsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/list_item_goal"
+                        />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/weekGoalsTextView"
+                        android:textAppearance="?attr/textAppearanceSubtitle1"
+                        android:text="@string/goals_for_this_week"
+                        android:padding="@dimen/margin_normal"
+                        android:visibility="@{BindingConverters.filteredListNotEmptyToVisibility(GoalListVM.getGoals(), GoalListVM.weekGoalsPredicate)}"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/weekGoalsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/list_item_goal"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/oneTimeGoalsTextView"
+                        android:textAppearance="?attr/textAppearanceSubtitle1"
+                        android:text="@string/one_time_goals"
+                        android:padding="@dimen/margin_normal"
+                        android:visibility="@{BindingConverters.filteredListNotEmptyToVisibility(GoalListVM.getGoals(), GoalListVM.oneTimeGoalsPredicate)}"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/oneTimeGoalsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/list_item_goal"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:src="@drawable/baseline_add_24"
+                android:layout_margin="@dimen/margin_normal"/>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

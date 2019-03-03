@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "819145131871",
+    "firebase_url": "https://mygoalsassistant.firebaseio.com",
+    "project_id": "mygoalsassistant",
+    "storage_bucket": "mygoalsassistant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819145131871:android:7d8e3879dc98b2a1",
+        "android_client_info": {
+          "package_name": "com.gmail.gerbencdg.mygoalsassistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819145131871-7ek710120bnmidi6dk70o5l4ka7jn7tp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gmail.gerbencdg.mygoalsassistant",
+            "certificate_hash": "95f5fe45aecab0a353f5b576d430aed2d7dd2e55"
+          }
+        },
+        {
+          "client_id": "819145131871-ecmc8u0tt2b7si77ijrjj6ibfi3uci7r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gmail.gerbencdg.mygoalsassistant",
+            "certificate_hash": "bbb179b80db5c7926a69b02cee67774b2f182e0c"
+          }
+        },
+        {
+          "client_id": "819145131871-rmhdbhcdt0eduf5fjf7ogmbtge3qlkhd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWZWpXvWC0TdfEvFwoPFUtyBcDKvCCVzY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819145131871-rmhdbhcdt0eduf5fjf7ogmbtge3qlkhd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

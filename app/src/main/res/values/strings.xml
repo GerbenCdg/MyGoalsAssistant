@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">MyGoalsAssistant</string>
+    <string name="my_goals">My Goals</string>
+    <string name="timeline">Timeline</string>
+    <string name="statistics">Statistics</string>
+    <string name="add_a_goal">Add a goal</string>
+    <string name="new_goals_new_life">New goals, new life</string>
+    <string name="title_of_your_goal">give your goal a title</string>
+    <string name="daily">daily</string>
+    <string name="each_week_ending">each week, starting on</string>
+    <string name="do_not_repeat">do not repeat</string>
+    <string name="goal_created">Goal created</string>
+    <string name="goal_creation_cancelled">Goal creation cancelled</string>
+    <string name="how_long_question">How long ?</string>
+    <string name="create_a_goal">Create a goal</string>
+    <string name="describe_your_goal">Describe your goal</string>
+    <string name="repeat_your_goal">Repeat your goal to make strong habits</string>
+    <string name="how_often">How often ?</string>
+    <string name="give_goal_a_title">Give a title to your goal</string>
+    <string name="goal_name_mandatory_error">Title cannot be empty</string>
+    <string name="success">Success</string>
+    <string name="fail">Fail</string>
+    <string name="done">done</string>
+    <string name="plus1">+1</string>
+    <string name="check_sign">✓</string>
+    <string name="goals_for_today">My goals for today</string>
+    <string name="goals_for_this_week">My goals for this week</string>
+    <string name="one_time_goals">My one-time goals</string>
+    <string name="no_goals_yet">You haven\'t set any goals yet !</string>
+    <string name="create_first_goal">Create my first goal :)</string>
+    <string name="no_internet_unable_to_receive_quote">No internet connection. Unable to retrieve quote</string>
+    <string name="unable_to_receive_quote">Unable to retrieve quote</string>
+    <string name="feature_coming_soon">Feature coming soon !</string>
+    <string name="add_a_result">add a result</string>
+    <string name="goal_details">Goal details</string>
+
+    <string-array name="days_of_week">
+        <item>monday</item>
+        <item>tuesday</item>
+        <item>wednesday</item>
+        <item>thursday</item>
+        <item>friday</item>
+        <item>saturday</item>
+        <item>sunday</item>
+    </string-array>
+</resources>

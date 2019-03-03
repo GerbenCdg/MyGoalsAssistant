@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. https://medium.com/over-engineering/setting-up-a-material-components-theme-for-android-fbf7774da739 -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="AppTheme.GoalDialog">
+
+    </style>
+
+    <style name="AppTheme.GoalDialog.Title" parent="AppTheme.GoalDialog">
+        <item name="android:textSize">@dimen/goal_dialog_title</item>
+        <item name="android:fontFamily">@font/oxygen_bold</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="AppTheme.GoalDialog.SubTitle" parent="AppTheme.GoalDialog">
+        <item name="android:textSize">@dimen/goal_dialog_subtitle</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="AppTheme.GoalDialog.PageIndicator" parent="AppTheme.GoalDialog">
+        <item name="android:textSize">@dimen/goal_dialog_title</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="AppTheme.SeekbarStyle" parent="AppTheme">
+        <item name="colorAccent">@color/light_green</item>
+    </style>
+
+    <style name="AppTheme.DoneButton" parent="AppTheme">
+        <item name="android:textSize">@dimen/goal_dialog_subtitle</item>
+    </style>
+</resources>

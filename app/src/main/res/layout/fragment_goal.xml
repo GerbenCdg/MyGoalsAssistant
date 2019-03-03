@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+         xmlns:app="http://schemas.android.com/apk/res-auto"
+         xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="goalVM" type="com.gmail.gerbencdg.mygoalsassistant.viewmodel.GoalVM"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:id="@+id/goalTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:minWidth="180dp"
+                android:text="@{goalVM.goal.name}"
+                style="@style/AppTheme.GoalDialog.Title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Drink water"/>
+
+        <TextView
+                android:id="@+id/goalDescriptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:minWidth="180dp"
+                android:text="@{goalVM.goal.description}"
+                style="@style/AppTheme.GoalDialog.SubTitle"
+                app:layout_constraintTop_toBottomOf="@+id/goalTitleTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Drink atleast 5 glasses of water per day"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/goalResultsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/addResultButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:listitem="@layout/list_item_goal_result"/>
+
+        <Button
+                android:id="@+id/addResultButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/add_a_result"
+                app:layout_constraintTop_toBottomOf="@+id/goalDescriptionTextView"
+                app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

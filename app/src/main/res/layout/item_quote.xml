@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_normal">
+
+        <LinearLayout
+                android:id="@+id/quoteLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_toStartOf="@+id/refreshQuoteImageButton"
+                style="@style/Base.TextAppearance.AppCompat.Title">
+
+            <TextView
+                    android:id="@+id/quoteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Weak people revenge. Strong people forgive. Intelligent people ignore."/>
+
+            <TextView
+                    android:id="@+id/quoteAuthorTextView"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    tools:text="Albert Einstein"/>
+
+        </LinearLayout>
+
+
+        <ImageButton
+                android:id="@+id/refreshQuoteImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                app:srcCompat="@drawable/baseline_refresh_white_24"
+                app:backgroundTint="@color/design_default_color_primary"
+                android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
